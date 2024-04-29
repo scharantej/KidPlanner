@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Kids Planner</title>
+</head>
+<body>
+<h1>Kids Planner</h1>
+<form action="/" method="POST">
+<label for="name">Name:</label>
+<input type="text" name="name" id="name">
+<br>
+<label for="time">Time:</label>
+<input type="time" name="time" id="time">
+<br>
+<label for="activity_type">Activity Type:</label>
+<select name="activity_type" id="activity_type">
+<option value="music">Music</option>
+<option value="sports">Sports</option>
+<option value="homework">Homework</option>
+</select>
+<br>
+<input type="submit" value="Add Activity">
+</form>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Time</th>
+<th>Activity Type</th>
+</tr>
+</thead>
+<tbody>
+{% for activity in activities %}
+<tr>
+<td>{{ activity.name }}</td>
+<td>{{ activity.time }}</td>
+<td>{{ activity.activity_type }}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+</body>
+</html>
+
+
