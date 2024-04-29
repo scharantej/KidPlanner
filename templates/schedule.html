@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Schedule</title>
+</head>
+<body>
+<h1>Schedule</h1>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Time</th>
+<th>Activity Type</th>
+</tr>
+</thead>
+<tbody>
+{% for activity in activities %}
+<tr>
+<td>{{ activity.name }}</td>
+<td>{{ activity.time }}</td>
+<td>{{ activity.activity_type }}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+</body>
+</html>
+
